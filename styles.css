@@ -164,19 +164,30 @@ section {
 .logo {
     display: flex;
     align-items: center;
-    font-weight: 700;
-    font-size: 1.5rem;
-    color: var(--primary-color);
+    gap: 10px;
+    text-decoration: none;
+    color: var(--text-color);
 }
 
-.logo svg {
-    margin-right: 10px;
+.logo-img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    transform: rotate(360deg);
+}
+
+.logo span {
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .logo-cn {
-    font-size: 0.9rem;
-    margin-left: 10px;
-    opacity: 0.8;
+    font-size: 1rem;
+    color: var(--text-color-light);
+    margin-left: 5px;
 }
 
 .nav-links {
@@ -557,19 +568,25 @@ section {
 .footer-logo {
     display: flex;
     align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-logo .logo-img {
+    width: 50px;
+    height: 50px;
 }
 
 .footer-logo-text {
-    margin-left: 10px;
-    font-weight: 600;
-    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .footer-logo-text .logo-cn {
-    font-size: 0.8rem;
-    opacity: 0.8;
+    font-size: 0.9rem;
+    margin-top: 5px;
 }
 
 .footer-links {
@@ -721,5 +738,245 @@ section {
     
     .cta-buttons .btn {
         width: 100%;
+    }
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.current-lang {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    color: var(--dark-color);
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.current-lang::after {
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    margin-left: 6px;
+    font-size: 0.8rem;
+}
+
+.current-lang:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    min-width: 150px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.language-selector:hover .language-dropdown,
+.language-dropdown:hover {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.language-dropdown a {
+    display: block;
+    padding: 8px 16px;
+    color: var(--text-color);
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.language-dropdown a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: var(--primary-color);
+}
+
+.language-dropdown a.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Chat Section Styles */
+.chat-section {
+    background-color: var(--light-color);
+    padding: 80px 0;
+}
+
+.chat-interface {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-messages-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.welcome-message {
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: var(--light-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.message {
+    border-radius: 18px;
+    padding: 12px 18px;
+    max-width: 80%;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message {
+    background-color: var(--primary-color);
+    color: white;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+}
+
+.assistant-message {
+    background-color: var(--light-color);
+    color: var(--text-color);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+}
+
+.chat-input-container {
+    display: flex;
+    padding: 15px;
+    background-color: #f5f7fa;
+    border-top: 1px solid #eaeaea;
+}
+
+#user-input {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 24px;
+    padding: 12px 20px;
+    font-size: 16px;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+#user-input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(71, 118, 230, 0.2);
+}
+
+#send-button {
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+#send-button i {
+    margin-right: 0;
+}
+
+#send-button span {
+    display: none;
+}
+
+/* Typing indicator */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: var(--light-color);
+    border-radius: 18px;
+    max-width: 100px;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin: 0 2px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation: pulse 1s infinite 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation: pulse 1s infinite 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation: pulse 1s infinite 0.4s;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.2); opacity: 1; }
+}
+
+/* Responsive updates for chat interface */
+@media (max-width: 768px) {
+    .chat-interface {
+        height: 400px;
+    }
+    
+    .message {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .chat-interface {
+        height: 350px;
+    }
+    
+    .language-dropdown {
+        right: -10px;
     }
 } 

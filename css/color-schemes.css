@@ -1,0 +1,176 @@
+/**
+ * NDE Q&A Website Color Schemes
+ * This file contains three different color schemes that can be applied to the website.
+ * To use, add a class to the body element (cosmic-harmony, warm-insight, or modern-clarity)
+ */
+
+/* ===== COLOR SCHEME 1: COSMIC HARMONY ===== */
+/* A calming, spiritual palette with deep blues and purples, evoking the cosmos and transcendent experiences */
+
+.cosmic-harmony {
+  --primary-dark: #1a237e;    /* Deep indigo - header background, footer */
+  --primary: #3949ab;         /* Indigo - primary buttons, active nav items */
+  --primary-light: #7986cb;   /* Light indigo - hover states, secondary elements */
+  --secondary: #7e57c2;       /* Purple - accent elements, highlights */
+  --secondary-light: #b39ddb; /* Light purple - subtle accents, dividers */
+  
+  --background-main: #f5f7ff; /* Very light blue-tinted background */
+  --background-alt: #e8eaf6;  /* Slightly darker alt background for cards */
+  --background-dark: #303f9f; /* Dark background for contrasting sections */
+  
+  --text-primary: #212121;    /* Near-black for main text */
+  --text-secondary: #3f51b5;  /* Indigo for headings and emphasized text */
+  --text-light: #ffffff;      /* White text for dark backgrounds */
+  --text-muted: #757575;      /* Grey for less important text */
+  
+  --success: #43a047;         /* Green for success messages */
+  --warning: #ffb300;         /* Amber for warnings */
+  --error: #e53935;           /* Red for errors */
+  
+  --chat-user: #e1f5fe;       /* Light blue for user chat bubbles */
+  --chat-ai: #e8eaf6;         /* Light indigo for AI responses */
+  
+  --shadow: rgba(26, 35, 126, 0.15); /* Shadow color with primary dark */
+}
+
+/* ===== COLOR SCHEME 2: WARM INSIGHT ===== */
+/* A warm, inviting palette with golds and deep reds, evoking enlightenment and the warmth of connection */
+
+.warm-insight {
+  --primary-dark: #bf360c;    /* Deep orange-red - header background, footer */
+  --primary: #e64a19;         /* Orange-red - primary buttons, active nav items */
+  --primary-light: #ff7043;   /* Light orange - hover states, secondary elements */
+  --secondary: #ffb300;       /* Amber - accent elements, highlights */
+  --secondary-light: #ffe082; /* Light amber - subtle accents, dividers */
+  
+  --background-main: #fffaf0; /* Very light warm background (ivory) */
+  --background-alt: #fff3e0;  /* Slightly darker alt background for cards */
+  --background-dark: #dd2c00; /* Dark background for contrasting sections */
+  
+  --text-primary: #3e2723;    /* Deep brown for main text */
+  --text-secondary: #d84315;  /* Deep orange for headings and emphasized text */
+  --text-light: #ffffff;      /* White text for dark backgrounds */
+  --text-muted: #8d6e63;      /* Brown-grey for less important text */
+  
+  --success: #2e7d32;         /* Green for success messages */
+  --warning: #ff8f00;         /* Darker amber for warnings */
+  --error: #c62828;           /* Darker red for errors */
+  
+  --chat-user: #fff8e1;       /* Very light amber for user chat bubbles */
+  --chat-ai: #ffecb3;         /* Light amber for AI responses */
+  
+  --shadow: rgba(191, 54, 12, 0.15); /* Shadow color with primary dark */
+}
+
+/* ===== COLOR SCHEME 3: MODERN CLARITY ===== */
+/* A clean, minimal palette with teal accents, evoking clarity and a scientific approach */
+
+.modern-clarity {
+  --primary-dark: #00695c;    /* Deep teal - header background, footer */
+  --primary: #00897b;         /* Teal - primary buttons, active nav items */
+  --primary-light: #4db6ac;   /* Light teal - hover states, secondary elements */
+  --secondary: #26a69a;       /* Medium teal - accent elements, highlights */
+  --secondary-light: #80cbc4; /* Very light teal - subtle accents, dividers */
+  
+  --background-main: #fafafa; /* Nearly white background */
+  --background-alt: #f5f5f5;  /* Very light grey alt background for cards */
+  --background-dark: #004d40; /* Very dark teal for contrasting sections */
+  
+  --text-primary: #212121;    /* Near-black for main text */
+  --text-secondary: #00796b;  /* Teal for headings and emphasized text */
+  --text-light: #ffffff;      /* White text for dark backgrounds */
+  --text-muted: #757575;      /* Grey for less important text */
+  
+  --success: #2e7d32;         /* Green for success messages */
+  --warning: #ffa000;         /* Amber for warnings */
+  --error: #d32f2f;           /* Red for errors */
+  
+  --chat-user: #e0f2f1;       /* Very light teal for user chat bubbles */
+  --chat-ai: #b2dfdb;         /* Light teal for AI responses */
+  
+  --shadow: rgba(0, 105, 92, 0.1); /* Shadow color with primary dark */
+}
+
+/* How to apply these color schemes:
+
+1. Add one of these classes to the <body> element:
+   - class="cosmic-harmony" for the spiritual blue/purple theme
+   - class="warm-insight" for the warm orange/amber theme
+   - class="modern-clarity" for the clean teal theme
+
+2. Then in your main CSS, use the variables like this:
+   header {
+     background-color: var(--primary-dark);
+     color: var(--text-light);
+   }
+   
+   .button-primary {
+     background-color: var(--primary);
+     color: var(--text-light);
+   }
+   
+   etc.
+
+3. To allow users to switch themes, you can use JavaScript to change the body class.
+*/
+
+/* Sample application to demonstrate each theme */
+.color-sample {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px var(--shadow);
+}
+
+.color-sample-header {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 20px;
+  text-align: center;
+}
+
+.color-sample-body {
+  background-color: var(--background-main);
+  padding: 20px;
+}
+
+.color-sample-card {
+  background-color: var(--background-alt);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  color: var(--text-primary);
+}
+
+.color-sample-button {
+  background-color: var(--primary);
+  color: var(--text-light);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.color-sample-button:hover {
+  background-color: var(--primary-light);
+}
+
+.color-sample-accent {
+  background-color: var(--secondary);
+  color: var(--text-light);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+.color-sample-footer {
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  padding: 15px;
+  text-align: center;
+  font-size: 0.8em;
+} 

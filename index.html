@@ -15,28 +15,24 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <svg width="40" height="40" viewBox="0 0 40 40">
-                    <circle cx="20" cy="20" r="18" fill="url(#grad1)" />
-                    <path d="M12,20 Q20,10 28,20 Q20,30 12,20" fill="none" stroke="white" stroke-width="2" />
-                    <defs>
-                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#4776E6" />
-                            <stop offset="100%" style="stop-color:#8E54E9" />
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <span>NDE Q&A</span>
-                <span class="logo-cn">濒死体验问答</span>
+                <img src="assets/logo.svg" alt="Near Death Experience (NDE) Q&A Logo" class="logo-img">
+                <span>Near Death Experience (NDE) Q&A</span>
             </div>
             <div class="nav-links">
-                <a href="#features" class="nav-link" data-lang-en="Features" data-lang-cn="功能">Features</a>
-                <a href="#how-it-works" class="nav-link" data-lang-en="How It Works" data-lang-cn="使用方法">How It Works</a>
-                <a href="#faq" class="nav-link" data-lang-en="FAQ" data-lang-cn="常见问题">FAQ</a>
-                <a href="#" class="nav-link lang-switch">
-                    <span class="current-lang">EN</span>
-                    <span class="divider">|</span>
-                    <span class="alt-lang">中文</span>
-                </a>
+                <a href="#features" class="nav-link" data-lang-key="features">Features</a>
+                <a href="#how-it-works" class="nav-link" data-lang-key="how-it-works">How It Works</a>
+                <a href="#faq" class="nav-link" data-lang-key="faq">FAQ</a>
+                <div class="language-selector">
+                    <button class="current-lang">EN</button>
+                    <div class="language-dropdown">
+                        <a href="#" data-lang="en" class="active">English</a>
+                        <a href="#" data-lang="zh-CN">简体中文</a>
+                        <a href="#" data-lang="zh-TW">繁體中文</a>
+                        <a href="#" data-lang="es">Español</a>
+                        <a href="#" data-lang="fr">Français</a>
+                        <a href="#" data-lang="ru">Русский</a>
+                    </div>
+                </div>
             </div>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -48,28 +44,28 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title" data-lang-en="Explore the Frontiers of Consciousness" data-lang-cn="探索意识的前沿">
+                <h1 class="hero-title" data-lang-key="hero-title">
                     Explore the Frontiers of Consciousness
                 </h1>
-                <p class="hero-subtitle" data-lang-en="A science-based AI platform for exploring Near-Death Experiences and the deeper meaning they reveal about our existence" data-lang-cn="一个基于科学的人工智能平台，探索濒死体验及其揭示的生命深层意义">
+                <p class="hero-subtitle" data-lang-key="hero-subtitle">
                     A science-based AI platform for exploring Near-Death Experiences and the deeper meaning they reveal about our existence
                 </p>
                 <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary" data-lang-en="Start Conversation" data-lang-cn="开始对话">Start Conversation</a>
-                    <a href="#about" class="btn btn-secondary" data-lang-en="Learn More" data-lang-cn="了解更多">Learn More</a>
+                    <a href="#chat-container" class="btn btn-primary scroll-to" data-lang-key="start-chat">Start Conversation</a>
+                    <a href="#about" class="btn btn-secondary" data-lang-key="learn-more">Learn More</a>
                 </div>
             </div>
             <div class="hero-image">
                 <div class="chat-preview">
                     <div class="chat-header">
-                        <div class="chat-title">NDE Q&A Assistant</div>
+                        <div class="chat-title" data-lang-key="chat-assistant">NDE Q&A Assistant</div>
                     </div>
                     <div class="chat-messages">
                         <div class="message user-message">
-                            <p>What do NDEs tell us about consciousness?</p>
+                            <p data-lang-key="preview-question">What do NDEs tell us about consciousness?</p>
                         </div>
                         <div class="message assistant-message">
-                            <p>Near-death experiences suggest consciousness may exist beyond physical brain function. Many experiencers report heightened awareness and clarity of thought even when brain activity is minimal...</p>
+                            <p data-lang-key="preview-answer">Near-death experiences suggest consciousness may exist beyond physical brain function. Many experiencers report heightened awareness and clarity of thought even when brain activity is minimal...</p>
                         </div>
                     </div>
                 </div>
@@ -81,8 +77,8 @@
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang-en="About NDE Q&A" data-lang-cn="关于濒死体验问答">About NDE Q&A</h2>
-                <p data-lang-en="Bridging science and personal experience through AI-powered conversations" data-lang-cn="通过AI对话连接科学与个人体验">
+                <h2 data-lang-key="about-title">About NDE Q&A</h2>
+                <p data-lang-key="about-subtitle">
                     Bridging science and personal experience through AI-powered conversations
                 </p>
             </div>
@@ -91,8 +87,8 @@
                     <div class="value-icon">
                         <i class="fas fa-brain"></i>
                     </div>
-                    <h3 data-lang-en="Evidence-Based" data-lang-cn="基于证据">Evidence-Based</h3>
-                    <p data-lang-en="Access insights from thousands of documented NDE cases and scientific research" data-lang-cn="获取来自数千个记录在案的濒死体验案例和科学研究的见解">
+                    <h3 data-lang-key="value-evidence">Evidence-Based</h3>
+                    <p data-lang-key="value-evidence-desc">
                         Access insights from thousands of documented NDE cases and scientific research
                     </p>
                 </div>
@@ -100,8 +96,8 @@
                     <div class="value-icon">
                         <i class="fas fa-balance-scale"></i>
                     </div>
-                    <h3 data-lang-en="Non-Religious" data-lang-cn="非宗教性">Non-Religious</h3>
-                    <p data-lang-en="Explore spiritual dimensions of existence without religious dogma or bias" data-lang-cn="在没有宗教教条或偏见的情况下探索存在的精神层面">
+                    <h3 data-lang-key="value-nonreligious">Non-Religious</h3>
+                    <p data-lang-key="value-nonreligious-desc">
                         Explore spiritual dimensions of existence without religious dogma or bias
                     </p>
                 </div>
@@ -109,8 +105,8 @@
                     <div class="value-icon">
                         <i class="fas fa-comments"></i>
                     </div>
-                    <h3 data-lang-en="Personalized" data-lang-cn="个性化">Personalized</h3>
-                    <p data-lang-en="Get tailored insights based on your questions and interests" data-lang-cn="根据您的问题和兴趣获取量身定制的见解">
+                    <h3 data-lang-key="value-personalized">Personalized</h3>
+                    <p data-lang-key="value-personalized-desc">
                         Get tailored insights based on your questions and interests
                     </p>
                 </div>
@@ -122,8 +118,8 @@
     <section id="features" class="features">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang-en="Key Features" data-lang-cn="主要功能">Key Features</h2>
-                <p data-lang-en="Discover what makes NDE Q&A unique" data-lang-cn="发现濒死体验问答的独特之处">
+                <h2 data-lang-key="features-title">Key Features</h2>
+                <p data-lang-key="features-subtitle">
                     Discover what makes NDE Q&A unique
                 </p>
             </div>
@@ -132,37 +128,64 @@
                     <div class="feature-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3 data-lang-en="AI Conversations" data-lang-cn="AI对话">AI Conversations</h3>
-                    <p data-lang-en="Engage in meaningful dialogues about consciousness, metaphysics, and the nature of reality" data-lang-cn="参与有关意识、形而上学和现实本质的有意义对话">
+                    <h3 data-lang-key="feature-ai">AI Conversations</h3>
+                    <p data-lang-key="feature-ai-desc">
                         Engage in meaningful dialogues about consciousness, metaphysics, and the nature of reality
                     </p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
-                        <i class="fas fa-database"></i>
+                        <img src="assets/feature-cases.svg" alt="Scientific Reasoning, Logical Deduction & Metaphysics" style="width:48px;height:48px;">
                     </div>
-                    <h3 data-lang-en="Case Library" data-lang-cn="案例库">Case Library</h3>
-                    <p data-lang-en="Access thousands of documented near-death experiences from around the world" data-lang-cn="访问来自世界各地的数千个记录在案的濒死体验">
+                    <h3 data-lang-key="feature-cases">Case Library</h3>
+                    <p data-lang-key="feature-cases-desc">
                         Access thousands of documented near-death experiences from around the world
                     </p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
-                        <i class="fas fa-search"></i>
+                        <img src="assets/feature-research.svg" alt="Key Research Insights" style="width:48px;height:48px;">
                     </div>
-                    <h3 data-lang-en="Research Insights" data-lang-cn="研究见解">Research Insights</h3>
-                    <p data-lang-en="Explore scientific findings on consciousness studies and mind-body connections" data-lang-cn="探索关于意识研究和身心连接的科学发现">
+                    <h3 data-lang-key="feature-research">Research Insights</h3>
+                    <p data-lang-key="feature-research-desc">
                         Explore scientific findings on consciousness studies and mind-body connections
                     </p>
                 </div>
                 <div class="feature">
                     <div class="feature-icon">
-                        <i class="fas fa-lightbulb"></i>
+                        <i class="fas fa-language"></i>
                     </div>
-                    <h3 data-lang-en="Meaning & Purpose" data-lang-cn="意义与目的">Meaning & Purpose</h3>
-                    <p data-lang-en="Discover insights about life's meaning and purpose through NDE accounts" data-lang-cn="通过濒死体验账户发现关于生命意义和目的的见解">
-                        Discover insights about life's meaning and purpose through NDE accounts
+                    <h3 data-lang-key="feature-multilingual">Multilingual Support</h3>
+                    <p data-lang-key="feature-multilingual-desc">
+                        Access insights in multiple languages including English, Chinese, Spanish, French, and Russian
                     </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chat Interface Section -->
+    <section id="chat-container" class="chat-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 data-lang-key="chat-section-title">AI Assistant Chat</h2>
+                <p data-lang-key="chat-section-subtitle">Ask questions about NDEs, consciousness, and the meaning of life</p>
+            </div>
+            <div class="chat-interface">
+                <div class="chat-messages-container" id="chat-messages">
+                    <div class="welcome-message assistant-message">
+                        <p data-lang-key="welcome-message">
+                            Welcome to NDE Q&A! I'm here to discuss near-death experiences, consciousness research, and spiritual insights from a science-based perspective. What would you like to explore today?
+                        </p>
+                    </div>
+                    <!-- Messages will be added here dynamically -->
+                </div>
+                <div class="chat-input-container">
+                    <textarea id="user-input" placeholder="Type your message here..." data-lang-key="input-placeholder" rows="2"></textarea>
+                    <button id="send-button" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-lang-key="send-button">Send</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -172,55 +195,40 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang-en="How It Works" data-lang-cn="使用方法">How It Works</h2>
-                <p data-lang-en="Simple steps to start exploring" data-lang-cn="开始探索的简单步骤">
+                <h2 data-lang-key="how-works-title">How It Works</h2>
+                <p data-lang-key="how-works-subtitle">
                     Simple steps to start exploring
                 </p>
             </div>
             <div class="steps">
                 <div class="step">
                     <div class="step-number">1</div>
-                    <h3 data-lang-en="Sign Up" data-lang-cn="注册">Sign Up</h3>
-                    <p data-lang-en="Create your free account to get started" data-lang-cn="创建您的免费账户以开始使用">
-                        Create your free account to get started
+                    <h3 data-lang-key="step1-title">Ask a Question</h3>
+                    <p data-lang-key="step1-desc">
+                        Type your question about NDEs, consciousness, or spiritual insights
                     </p>
                 </div>
                 <div class="step">
                     <div class="step-number">2</div>
-                    <h3 data-lang-en="Ask Questions" data-lang-cn="提问">Ask Questions</h3>
-                    <p data-lang-en="Inquire about NDE cases, consciousness, or spiritual insights" data-lang-cn="询问有关濒死体验案例、意识或精神见解的问题">
-                        Inquire about NDE cases, consciousness, or spiritual insights
+                    <h3 data-lang-key="step2-title">Get AI Response</h3>
+                    <p data-lang-key="step2-desc">
+                        Receive evidence-based insights from our AI assistant
                     </p>
                 </div>
                 <div class="step">
                     <div class="step-number">3</div>
-                    <h3 data-lang-en="Receive Insights" data-lang-cn="获取见解">Receive Insights</h3>
-                    <p data-lang-en="Get evidence-based responses from our AI assistant" data-lang-cn="从我们的AI助手获取基于证据的回应">
-                        Get evidence-based responses from our AI assistant
+                    <h3 data-lang-key="step3-title">Explore Further</h3>
+                    <p data-lang-key="step3-desc">
+                        Dive deeper with follow-up questions or new topics
                     </p>
                 </div>
                 <div class="step">
                     <div class="step-number">4</div>
-                    <h3 data-lang-en="Explore Further" data-lang-cn="深入探索">Explore Further</h3>
-                    <p data-lang-en="Dive deeper into topics that interest you most" data-lang-cn="深入探索您最感兴趣的主题">
-                        Dive deeper into topics that interest you most
+                    <h3 data-lang-key="step4-title">Switch Languages</h3>
+                    <p data-lang-key="step4-desc">
+                        Access the same insights in your preferred language
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 data-lang-en="Ready to Explore the Deeper Questions?" data-lang-cn="准备好探索更深层次的问题了吗？">
-                    Ready to Explore the Deeper Questions?
-                </h2>
-                <p data-lang-en="Start your journey into understanding consciousness, spirituality, and the nature of existence through the lens of near-death experiences" data-lang-cn="通过濒死体验的视角，开始您理解意识、灵性和存在本质的旅程">
-                    Start your journey into understanding consciousness, spirituality, and the nature of existence through the lens of near-death experiences
-                </p>
-                <a href="#" class="btn btn-primary btn-large" data-lang-en="Begin Your Journey" data-lang-cn="开始您的旅程">Begin Your Journey</a>
             </div>
         </div>
     </section>
@@ -229,61 +237,61 @@
     <section id="faq" class="faq">
         <div class="container">
             <div class="section-header">
-                <h2 data-lang-en="Frequently Asked Questions" data-lang-cn="常见问题">Frequently Asked Questions</h2>
-                <p data-lang-en="Find answers to common questions about NDE Q&A" data-lang-cn="查找关于濒死体验问答的常见问题的答案">
+                <h2 data-lang-key="faq-title">Frequently Asked Questions</h2>
+                <p data-lang-key="faq-subtitle">
                     Find answers to common questions about NDE Q&A
                 </p>
             </div>
             <div class="faq-items">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3 data-lang-en="What is a near-death experience (NDE)?" data-lang-cn="什么是濒死体验(NDE)？">
+                        <h3 data-lang-key="faq1-question">
                             What is a near-death experience (NDE)?
                         </h3>
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p data-lang-en="A near-death experience is a profound psychological event that may occur when a person is close to death or in a situation of physical or emotional crisis. Many report similar elements such as leaving the body, moving through a tunnel, encountering light, meeting deceased loved ones, and experiencing a life review." data-lang-cn="濒死体验是一种深刻的心理事件，它可能发生在一个人接近死亡或处于身体或情感危机的情况下。许多人报告类似的元素，如离开身体、穿过隧道、遇到光明、遇到已故的亲人，以及经历生命回顾。">
+                        <p data-lang-key="faq1-answer">
                             A near-death experience is a profound psychological event that may occur when a person is close to death or in a situation of physical or emotional crisis. Many report similar elements such as leaving the body, moving through a tunnel, encountering light, meeting deceased loved ones, and experiencing a life review.
                         </p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3 data-lang-en="Is NDE Q&A affiliated with any religion?" data-lang-cn="濒死体验问答是否隶属于任何宗教？">
-                            Is NDE Q&A affiliated with any religion?
+                        <h3 data-lang-key="faq2-question">
+                            How does the AI chat work?
                         </h3>
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p data-lang-en="No, NDE Q&A is strictly science-based and non-religious. We explore the spiritual dimensions of NDEs without religious dogma or bias, focusing on documented cases and scientific research." data-lang-cn="不，濒死体验问答严格基于科学且非宗教性。我们在没有宗教教条或偏见的情况下探索濒死体验的精神层面，专注于有记录的案例和科学研究。">
-                            No, NDE Q&A is strictly science-based and non-religious. We explore the spiritual dimensions of NDEs without religious dogma or bias, focusing on documented cases and scientific research.
+                        <p data-lang-key="faq2-answer">
+                            Our AI assistant uses advanced natural language processing technology to understand your questions and provide meaningful responses. It's trained on thousands of NDE cases, scientific research, and philosophical texts to give you balanced, evidence-based insights.
                         </p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3 data-lang-en="What sources does your AI use to answer questions?" data-lang-cn="您的AI使用哪些来源来回答问题？">
-                            What sources does your AI use to answer questions?
+                        <h3 data-lang-key="faq3-question">
+                            Is the information religiously biased?
                         </h3>
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p data-lang-en="Our AI draws from a comprehensive database of documented NDE cases, peer-reviewed scientific literature, consciousness studies, and metaphysical research. We prioritize evidence-based information while remaining open to the subjective nature of personal experiences." data-lang-cn="我们的AI从有记录的濒死体验案例、同行评审的科学文献、意识研究和形而上学研究的综合数据库中汲取信息。我们优先考虑基于证据的信息，同时保持对个人经验的主观性的开放态度。">
-                            Our AI draws from a comprehensive database of documented NDE cases, peer-reviewed scientific literature, consciousness studies, and metaphysical research. We prioritize evidence-based information while remaining open to the subjective nature of personal experiences.
+                        <p data-lang-key="faq3-answer">
+                            No. We take a scientific approach to understanding NDEs and consciousness. While many NDEs have spiritual elements, we present information without religious dogma or bias, focusing on documented experiences and scientific research.
                         </p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <h3 data-lang-en="Can I share my own NDE experience?" data-lang-cn="我可以分享自己的濒死体验吗？">
-                            Can I share my own NDE experience?
+                        <h3 data-lang-key="faq4-question">
+                            How accurate are the translations?
                         </h3>
                         <span class="faq-toggle"><i class="fas fa-plus"></i></span>
                     </div>
                     <div class="faq-answer">
-                        <p data-lang-en="Yes, registered users can share their personal experiences, which can help contribute to our understanding of NDEs. However, these are kept separate from our verified research database unless they undergo a verification process." data-lang-cn="是的，注册用户可以分享他们的个人经历，这可以帮助我们理解濒死体验。但是，这些内容与我们经过验证的研究数据库分开保存，除非它们经过验证过程。">
-                            Yes, registered users can share their personal experiences, which can help contribute to our understanding of NDEs. However, these are kept separate from our verified research database unless they undergo a verification process.
+                        <p data-lang-key="faq4-answer">
+                            We use advanced translation technology to provide content in multiple languages. While the translations are high quality, some nuances may be lost. If you notice any translation issues, please let us know and we'll improve them.
                         </p>
                     </div>
                 </div>
@@ -296,45 +304,38 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <svg width="40" height="40" viewBox="0 0 40 40">
-                        <circle cx="20" cy="20" r="18" fill="url(#grad1)" />
-                        <path d="M12,20 Q20,10 28,20 Q20,30 12,20" fill="none" stroke="white" stroke-width="2" />
-                    </svg>
+                    <img src="assets/logo.svg" alt="Near Death Experience (NDE) Q&A Logo" class="logo-img">
                     <div class="footer-logo-text">
-                        <span>NDE Q&A</span>
-                        <span class="logo-cn">濒死体验问答</span>
+                        Near Death Experience (NDE) Q&A
                     </div>
                 </div>
                 <div class="footer-links">
                     <div class="footer-links-column">
-                        <h4 data-lang-en="Explore" data-lang-cn="探索">Explore</h4>
-                        <a href="#" data-lang-en="NDE Cases" data-lang-cn="濒死体验案例">NDE Cases</a>
-                        <a href="#" data-lang-en="Research" data-lang-cn="研究">Research</a>
-                        <a href="#" data-lang-en="Consciousness" data-lang-cn="意识">Consciousness</a>
-                        <a href="#" data-lang-en="Spirituality" data-lang-cn="灵性">Spirituality</a>
+                        <h4 data-lang-key="explore">Explore</h4>
+                        <a href="#about" data-lang-key="about">About</a>
+                        <a href="#features" data-lang-key="features">Features</a>
+                        <a href="#how-it-works" data-lang-key="how-it-works">How It Works</a>
+                        <a href="#faq" data-lang-key="faq">FAQ</a>
                     </div>
                     <div class="footer-links-column">
-                        <h4 data-lang-en="Company" data-lang-cn="公司">Company</h4>
-                        <a href="#" data-lang-en="About Us" data-lang-cn="关于我们">About Us</a>
-                        <a href="#" data-lang-en="Our Team" data-lang-cn="我们的团队">Our Team</a>
-                        <a href="#" data-lang-en="Blog" data-lang-cn="博客">Blog</a>
-                        <a href="#" data-lang-en="Contact" data-lang-cn="联系我们">Contact</a>
+                        <h4 data-lang-key="legal">Legal</h4>
+                        <a href="#" data-lang-key="privacy-policy">Privacy Policy</a>
+                        <a href="#" data-lang-key="terms-of-service">Terms of Service</a>
+                        <a href="#" data-lang-key="disclaimer">Disclaimer</a>
                     </div>
                     <div class="footer-links-column">
-                        <h4 data-lang-en="Legal" data-lang-cn="法律">Legal</h4>
-                        <a href="#" data-lang-en="Privacy Policy" data-lang-cn="隐私政策">Privacy Policy</a>
-                        <a href="#" data-lang-en="Terms of Service" data-lang-cn="服务条款">Terms of Service</a>
-                        <a href="#" data-lang-en="Cookie Policy" data-lang-cn="Cookie政策">Cookie Policy</a>
+                        <h4 data-lang-key="connect">Connect</h4>
+                        <a href="#" data-lang-key="contact">Contact Us</a>
+                        <a href="#" data-lang-key="support">Support</a>
+                        <a href="#" data-lang-key="feedback">Feedback</a>
                     </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p data-lang-en="© 2023 NDE Q&A. All rights reserved." data-lang-cn="© 2023 濒死体验问答。保留所有权利。">
-                    © 2023 NDE Q&A. All rights reserved.
-                </p>
+                <p data-lang-key="copyright">© 2024 NDE Q&A. All rights reserved.</p>
                 <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
                     <a href="#"><i class="fab fa-youtube"></i></a>
                 </div>
@@ -342,37 +343,10 @@
         </div>
     </footer>
 
-    <script>
-        // Basic JavaScript for FAQ accordion and mobile menu
-        document.addEventListener('DOMContentLoaded', function() {
-            // FAQ Accordion
-            const faqItems = document.querySelectorAll('.faq-item');
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                question.addEventListener('click', () => {
-                    item.classList.toggle('active');
-                    const toggle = item.querySelector('.faq-toggle i');
-                    toggle.classList.toggle('fa-plus');
-                    toggle.classList.toggle('fa-minus');
-                });
-            });
-
-            // Mobile Menu Toggle
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            menuToggle.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-                menuToggle.classList.toggle('active');
-            });
-
-            // Language switcher (placeholder for future implementation)
-            const langSwitch = document.querySelector('.lang-switch');
-            langSwitch.addEventListener('click', function(e) {
-                e.preventDefault();
-                // This would be replaced with actual language switching logic
-                alert('Language switching functionality would be implemented with JavaScript');
-            });
-        });
-    </script>
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/language-switcher.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html> 

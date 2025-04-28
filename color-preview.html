@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDE Q&A - Color Scheme Preview</title>
+    <link rel="stylesheet" href="css/color-schemes.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .schemes-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .scheme-column {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+        }
+        
+        .scheme-title {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .chat-preview {
+            margin-top: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        
+        .chat-header {
+            background-color: var(--primary-dark);
+            color: var(--text-light);
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .chat-messages {
+            background-color: var(--background-main);
+            padding: 15px;
+            height: 200px;
+        }
+        
+        .chat-message {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            max-width: 80%;
+        }
+        
+        .user-message {
+            background-color: var(--chat-user);
+            margin-left: auto;
+            border-radius: 10px 0 10px 10px;
+        }
+        
+        .ai-message {
+            background-color: var(--chat-ai);
+            border-radius: 0 10px 10px 10px;
+        }
+        
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background-color: var(--background-alt);
+        }
+        
+        .chat-input input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid var(--secondary-light);
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        
+        .buttons-preview {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .button-sample {
+            padding: 12px 15px;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .primary-button {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+        
+        .secondary-button {
+            background-color: var(--secondary);
+            color: var(--text-light);
+        }
+        
+        .text-button {
+            background-color: transparent;
+            color: var(--text-secondary);
+            text-decoration: underline;
+        }
+        
+        .color-swatches {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .color-swatch {
+            height: 40px;
+            flex: 1;
+            min-width: 80px;
+            border-radius: 5px;
+        }
+        
+        .status-indicators {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .status {
+            padding: 8px 12px;
+            border-radius: 5px;
+            color: var(--text-light);
+            flex: 1;
+            text-align: center;
+        }
+        
+        .status-success {
+            background-color: var(--success);
+        }
+        
+        .status-warning {
+            background-color: var(--warning);
+        }
+        
+        .status-error {
+            background-color: var(--error);
+        }
+    </style>
+</head>
+<body>
+    <h1>NDE Q&A Website - Color Scheme Preview</h1>
+    
+    <div class="schemes-container">
+        <!-- Cosmic Harmony -->
+        <div class="scheme-column cosmic-harmony">
+            <div class="scheme-title">Cosmic Harmony</div>
+            
+            <div class="color-sample">
+                <div class="color-sample-header">
+                    <h2>Explore the Frontiers of Consciousness</h2>
+                </div>
+                <div class="color-sample-body">
+                    <div class="color-sample-card">
+                        <h3 style="color: var(--text-secondary);">About NDE Q&A</h3>
+                        <p>A science-based AI platform for exploring Near-Death Experiences and their deeper meaning</p>
+                    </div>
+                    <button class="color-sample-button">Start Conversation</button>
+                    <div class="color-sample-accent">
+                        Evidence-Based Insights
+                    </div>
+                </div>
+                <div class="color-sample-footer">
+                    © 2024 NDE Q&A
+                </div>
+            </div>
+            
+            <div class="chat-preview">
+                <div class="chat-header">NDE Q&A Assistant</div>
+                <div class="chat-messages">
+                    <div class="chat-message ai-message">Welcome to NDE Q&A! How can I help you explore consciousness today?</div>
+                    <div class="chat-message user-message">What happens during a near-death experience?</div>
+                    <div class="chat-message ai-message">Many report leaving their body, moving through a tunnel, encountering light, and experiencing a life review.</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message here...">
+                    <button class="color-sample-button">Send</button>
+                </div>
+            </div>
+            
+            <div class="buttons-preview">
+                <button class="button-sample primary-button">Primary Button</button>
+                <button class="button-sample secondary-button">Secondary Button</button>
+                <button class="button-sample text-button">Text Link</button>
+            </div>
+            
+            <div class="color-swatches">
+                <div class="color-swatch" style="background-color: var(--primary-dark);"></div>
+                <div class="color-swatch" style="background-color: var(--primary);"></div>
+                <div class="color-swatch" style="background-color: var(--secondary);"></div>
+            </div>
+            
+            <div class="status-indicators">
+                <div class="status status-success">Success</div>
+                <div class="status status-warning">Warning</div>
+                <div class="status status-error">Error</div>
+            </div>
+        </div>
+        
+        <!-- Warm Insight -->
+        <div class="scheme-column warm-insight">
+            <div class="scheme-title">Warm Insight</div>
+            
+            <div class="color-sample">
+                <div class="color-sample-header">
+                    <h2>Explore the Frontiers of Consciousness</h2>
+                </div>
+                <div class="color-sample-body">
+                    <div class="color-sample-card">
+                        <h3 style="color: var(--text-secondary);">About NDE Q&A</h3>
+                        <p>A science-based AI platform for exploring Near-Death Experiences and their deeper meaning</p>
+                    </div>
+                    <button class="color-sample-button">Start Conversation</button>
+                    <div class="color-sample-accent">
+                        Evidence-Based Insights
+                    </div>
+                </div>
+                <div class="color-sample-footer">
+                    © 2024 NDE Q&A
+                </div>
+            </div>
+            
+            <div class="chat-preview">
+                <div class="chat-header">NDE Q&A Assistant</div>
+                <div class="chat-messages">
+                    <div class="chat-message ai-message">Welcome to NDE Q&A! How can I help you explore consciousness today?</div>
+                    <div class="chat-message user-message">What happens during a near-death experience?</div>
+                    <div class="chat-message ai-message">Many report leaving their body, moving through a tunnel, encountering light, and experiencing a life review.</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message here...">
+                    <button class="color-sample-button">Send</button>
+                </div>
+            </div>
+            
+            <div class="buttons-preview">
+                <button class="button-sample primary-button">Primary Button</button>
+                <button class="button-sample secondary-button">Secondary Button</button>
+                <button class="button-sample text-button">Text Link</button>
+            </div>
+            
+            <div class="color-swatches">
+                <div class="color-swatch" style="background-color: var(--primary-dark);"></div>
+                <div class="color-swatch" style="background-color: var(--primary);"></div>
+                <div class="color-swatch" style="background-color: var(--secondary);"></div>
+            </div>
+            
+            <div class="status-indicators">
+                <div class="status status-success">Success</div>
+                <div class="status status-warning">Warning</div>
+                <div class="status status-error">Error</div>
+            </div>
+        </div>
+        
+        <!-- Modern Clarity -->
+        <div class="scheme-column modern-clarity">
+            <div class="scheme-title">Modern Clarity</div>
+            
+            <div class="color-sample">
+                <div class="color-sample-header">
+                    <h2>Explore the Frontiers of Consciousness</h2>
+                </div>
+                <div class="color-sample-body">
+                    <div class="color-sample-card">
+                        <h3 style="color: var(--text-secondary);">About NDE Q&A</h3>
+                        <p>A science-based AI platform for exploring Near-Death Experiences and their deeper meaning</p>
+                    </div>
+                    <button class="color-sample-button">Start Conversation</button>
+                    <div class="color-sample-accent">
+                        Evidence-Based Insights
+                    </div>
+                </div>
+                <div class="color-sample-footer">
+                    © 2024 NDE Q&A
+                </div>
+            </div>
+            
+            <div class="chat-preview">
+                <div class="chat-header">NDE Q&A Assistant</div>
+                <div class="chat-messages">
+                    <div class="chat-message ai-message">Welcome to NDE Q&A! How can I help you explore consciousness today?</div>
+                    <div class="chat-message user-message">What happens during a near-death experience?</div>
+                    <div class="chat-message ai-message">Many report leaving their body, moving through a tunnel, encountering light, and experiencing a life review.</div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" placeholder="Type your message here...">
+                    <button class="color-sample-button">Send</button>
+                </div>
+            </div>
+            
+            <div class="buttons-preview">
+                <button class="button-sample primary-button">Primary Button</button>
+                <button class="button-sample secondary-button">Secondary Button</button>
+                <button class="button-sample text-button">Text Link</button>
+            </div>
+            
+            <div class="color-swatches">
+                <div class="color-swatch" style="background-color: var(--primary-dark);"></div>
+                <div class="color-swatch" style="background-color: var(--primary);"></div>
+                <div class="color-swatch" style="background-color: var(--secondary);"></div>
+            </div>
+            
+            <div class="status-indicators">
+                <div class="status status-success">Success</div>
+                <div class="status status-warning">Warning</div>
+                <div class="status status-error">Error</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple script to add active/hover class for interactive elements
+        const buttons = document.querySelectorAll('.button-sample, .color-sample-button');
+        
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                if (button.classList.contains('primary-button') || 
+                    button.classList.contains('color-sample-button')) {
+                    button.style.backgroundColor = 'var(--primary-light)';
+                } else if (button.classList.contains('secondary-button')) {
+                    button.style.backgroundColor = 'var(--secondary-light)';
+                }
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                if (button.classList.contains('primary-button') || 
+                    button.classList.contains('color-sample-button')) {
+                    button.style.backgroundColor = 'var(--primary)';
+                } else if (button.classList.contains('secondary-button')) {
+                    button.style.backgroundColor = 'var(--secondary)';
+                }
+            });
+        });
+    </script>
+</body>
+</html> 
