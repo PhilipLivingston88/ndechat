@@ -3,5 +3,8 @@
     "date-fns": "^4.1.0",
     "react-markdown": "^10.1.0",
     "rehype-raw": "^7.0.0"
+  },
+  "scripts": {
+    "build": "react-scripts build"
   }
 }
