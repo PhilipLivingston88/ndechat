@@ -113,4 +113,4 @@ The AI assistant's behavior can be customized by:
 
 - OpenAI for the ChatGPT API
 - Font Awesome for icons
-- Google Fonts for typography 
+- Google Fonts for typography "# ndechat" 
