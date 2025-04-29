@@ -1,11 +1,28 @@
-// ... existing code ...
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 import ScienceBlogPage from './pages/ScienceBlogPage';
 import ResearchBlogPage from './pages/ResearchBlogPage';
 import BlogPost from './components/BlogPost';
 
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1976d2',
+    },
+    secondary: {
+      main: '#dc004e',
+    },
+  },
+});
+
 function App() {
-  // ... existing code ...
-  
   return (
     <Router>
       <ThemeProvider theme={theme}>
@@ -13,14 +30,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          {/* 添加博客相关路由 */}
           <Route path="/science" element={<ScienceBlogPage />} />
           <Route path="/research" element={<ResearchBlogPage />} />
           <Route path="/blog/:category/:id" element={<BlogPost />} />
-          {/* 其他现有路由 */}
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          {/* ... 其他路由 ... */}
         </Routes>
         <Footer />
       </ThemeProvider>
